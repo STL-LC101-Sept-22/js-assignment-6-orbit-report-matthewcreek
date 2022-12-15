@@ -2,19 +2,23 @@
     <tr class="header-row">
         <th (click)="sort('name')" class="sortable">Name</th>
         <th (click)="sort('type')" class="sortable">Type</th>
-        <th>Operational</th>
-        <th>Orbit Type</th>
-        <th>Launch Date</th>
+        <th (click)="sort('operational')" class="sortable">Operational</th>
+        <th (click)="sort('orbitType')" class="sortable">Orbit Type</th>
+        <th (click)="sort('launchDate')" class="sortable">Launch Date</th>
     </tr>
-    <tr class="data-row">
-        <td>GPS 938</td>
-        <td>Positioning</td>
-        <td>true</td>
-        <td>HIGH</td>
-        <td>2001-11-01</td>
+    <tr class="data-row" *ngFor="let satellite of satellites; index as i" [class.highlight]="satellite.isEven(i)">
+        <td>{{satellite.name}}</td>
+        <td 
+        [class.warning]="satellite.isSpaceDebris()">{{satellite.type}}</td>
+        <td
+        [class.operationalNo]="!satellite.operational" 
+        [class.operationalYes]="satellite.operational">{{satellite.operational}}</td>
+        <td 
+        [class.lowOrbit]="satellite.isOrbitLow()" 
+        [class.highOrbit]="!satellite.isOrbitLow()">{{satellite.orbitType}}</td>
+        <td>{{satellite.launchDate}}</td>
     </tr>
 </table>
 
 <!-- TODO 2b: use *ngFor to display satellite data in the table -->
 <!-- TODO 3b: add style directive to conditionally highlight satellite type -->
-

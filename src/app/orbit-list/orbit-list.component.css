@@ -4,7 +4,7 @@
 }
 
 .warning {
-	background-color: #da8a8a;
+	background: #da8a8a;
 }
 
 table {
@@ -25,4 +25,30 @@ th, td {
 	text-align: left;
 	margin: 5px 10px;
 	padding: 6px;
+}
+
+.highlight {
+	background: rgb(250, 199, 104);
+}
+
+.operationalNo {
+	color: red;
+	font-style: oblique;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.operationalYes {
+	color: green;
+	text-transform: capitalize;
+}
+
+.lowOrbit {
+	background: rgb(85, 85, 248);
+	color: white;
+}
+
+.highOrbit {
+	background: rgb(14, 14, 114);
+	color:white;
 }

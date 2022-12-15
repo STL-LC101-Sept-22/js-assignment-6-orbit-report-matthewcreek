@@ -12,3 +12,7 @@
 .counts span {
 	float: right;
 }
+
+.countList:hover {
+	color: rgb(60, 255, 0);
+}
