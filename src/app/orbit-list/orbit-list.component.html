@@ -2,9 +2,9 @@
     <tr class="header-row">
         <th (click)="sort('name')" class="sortable">Name</th>
         <th (click)="sort('type')" class="sortable">Type</th>
-        <th>Operational</th>
-        <th>Orbit Type</th>
-        <th>Launch Date</th>
+        <th (click)="sort('operational')" class="sortable">Operational</th>
+        <th (click)="sort('orbitType')" class="sortable">Orbit Type</th>
+        <th (click)="sort('launchDate')" class="sortable">Launch Date</th>
     </tr>
     <tr class="data-row" *ngFor="let satellite of satellites; index as i" [class.highlight]="satellite.isEven(i)">
         <td>{{satellite.name}}</td>
