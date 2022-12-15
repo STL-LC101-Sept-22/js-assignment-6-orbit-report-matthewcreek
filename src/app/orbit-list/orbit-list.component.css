@@ -35,10 +35,12 @@ th, td {
 	color: red;
 	font-style: oblique;
 	font-weight: 700;
+	text-transform: capitalize;
 }
 
 .operationalYes {
 	color: green;
+	text-transform: capitalize;
 }
 
 .lowOrbit {
@@ -48,5 +50,5 @@ th, td {
 
 .highOrbit {
 	background: rgb(14, 14, 114);
-	color:white
+	color:white;
 }
