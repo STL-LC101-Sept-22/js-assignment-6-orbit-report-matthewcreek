@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Satellite } from '../satellite';
 
 @Component({
@@ -8,6 +8,10 @@ import { Satellite } from '../satellite';
 })
 export class OrbitCountsComponent implements OnInit {
 
+	@Output() $onClick = new EventEmitter<string>();
+	public click(a: string): void{
+		this.$onClick.emit(a);
+	}
 	@Input() satellites: Satellite[];
 
   constructor() { }

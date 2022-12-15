@@ -1,7 +1,7 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
 	<div>Total: <span class="counts-total">{{countByType('any')}}</span></div>
-	<div *ngFor="let type of satType">{{type}}: <span class="counts-total">{{countByType(type)}}</span></div>
+	<div *ngFor="let type of satType" (click)="click((type))">{{type}}: <span class="counts-total">{{countByType(type)}}</span></div>
 </div>
 
 
