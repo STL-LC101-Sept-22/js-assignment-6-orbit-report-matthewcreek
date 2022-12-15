@@ -20,6 +20,20 @@ export class Satellite {
 		} else return false;
 	}
 
+	isEven(num: number): boolean{
+		if (num % 2 === 0){
+			return true;
+		} else {
+			return false;
+	  }
+	}
+	isOrbitLow(): boolean {
+		if (this.orbitType === "LOW"){
+			return true;
+		} else if (this.orbitType === "HIGH"){
+			return false;
+		} else return;
+	}
 }
 
 // TODO 3a: fix isSpaceDebris check
